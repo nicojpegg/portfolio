@@ -13,9 +13,35 @@ a:hover {
     text-decoration: underline;
 }
 
-.header a {
+.terminal pre {
     color: #00FF00;
     text-decoration: none;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 12px;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.green {
+    color: #00FF00;
+}
+
+.grey {
+    color: #cacaca;
+}
+
+.dark {
+    color: #8a8a8a;
+}
+
+.cursor {
+    color: #cacaca;
+    animation: blink 1.5s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
