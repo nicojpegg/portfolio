@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="frame">
+        <div class="frame_buttons">
+            <span class="button-red" onclick="window.close();"></span>
+            <span class="button-yellow"></span>
+            <span class="button-green" onclick="if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); } else { document.exitFullscreen(); }"></span>
+        </div>
+    </div>
+
     <div class="terminal">
         <div class="cmd">
             <p>
@@ -36,12 +44,21 @@
             <a href="/contact/">> contact</a>
         </div>
 
-        <br>
-
         <div class="cmd">
             <p>
             <span class="grey">guest</span><span class="dark">@</span><a class="green" href="/">nicojpeg.tech</a><span class="dark">:$ ~</span> <span class="grey">contact</span>
             </p>
+        </div>
+
+        <div class="contact">
+            <p class="line">📂 Fetching contact information from ~/media/contact...</p>
+
+            <a class="line" href="mailto:me@nicojpeg.tech">> Mail: me@nicojpeg.tech</a>
+            <br>
+            <a class="line">> Discord: nico.jpeg</a>
+            <br>
+            <br>
+            <span class="cursor">_</span>
         </div>
     </div>
 </body>
