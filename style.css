@@ -2,6 +2,8 @@ body {
     background-color: #000000;
     font-family: 'Source Code Pro', monospace;
     color: #FFFFFF;
+    margin: 0;
+    cursor: default;
 }
 
 a {
@@ -11,6 +13,12 @@ a {
 
 a:hover {
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.terminal {
+    padding-top: 1px;
+    padding-left: 15px;
 }
 
 .terminal pre {
@@ -44,4 +52,50 @@ a:hover {
     50% {
         opacity: 0;
     }
+}
+
+.frame {
+    margin: 0px;
+    background-color: #2c2c2c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.frame_buttons {
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    cursor: default;
+}
+
+.button-red {
+    background-color: #ff5c5c;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-yellow {
+    background-color: #ffbd44;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-green {
+    background-color: #00ff00;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.frame_title {
+    color: #ffffff;
+    text-align: center;
 }
