@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nico.jpeg | home</title>
+    <title>nico.jpeg</title>
 
     <link rel="stylesheet" href="/style.css">
 
@@ -20,36 +20,29 @@
         </div>
     </div>
 
-    <div class="terminal">
-        <div class="cmd">
-            <p>
-                <span class="grey">guest</span><span class="dark">@</span><a class="green" href="/">nicojpeg.tech</a><span class="dark">:$ ~</span>
-            </p>
-        </div>
-
-        <pre>
+    <div class="terminal" id="terminal">
+        <div id="terminal-output">
+            <div id="terminal-header">
+            <pre class="ascii" id="ascii-art">
 ███╗   ██╗██╗ ██████╗ ██████╗         ██╗██████╗ ███████╗ ██████╗ 
 ████╗  ██║██║██╔════╝██╔═══██╗        ██║██╔══██╗██╔════╝██╔════╝ 
 ██╔██╗ ██║██║██║     ██║   ██║        ██║██████╔╝█████╗  ██║  ███╗
 ██║╚██╗██║██║██║     ██║   ██║   ██   ██║██╔═══╝ ██╔══╝  ██║   ██║
 ██║ ╚████║██║╚██████╗╚██████╔╝██╗╚█████╔╝██║     ███████╗╚██████╔╝
 ╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚════╝ ╚═╝     ╚══════╝ ╚═════╝ 
-        </pre>
-
-        <div class="links">
-            <a href="/about/">> about</a><br>
-            <a href="/projects/">> projects</a><br>
-            <a href="/photography/">> photography</a><br>
-            <a href="/links/">> links</a><br>
-            <a href="/contact/">> contact</a>
+            </pre>
+            <div class="hint" id="home-hint">type 'help' to list available commands</div>
+            </div>
         </div>
 
-        <div class="cmd">
+        <div class="cmd input-line" id="active-input-line">
             <p>
-            <span class="grey">guest</span><span class="dark">@</span><a class="green" href="/">nicojpeg.tech</a><span class="dark">:$ ~</span>
-            <span class="cursor">_</span>
+                <span class="grey">guest</span><span class="dark">@</span><a class="green" href="/" data-command="home">nicojpeg.tech</a><span class="dark">:$ ~</span>
+                <span id="typed" class="typed" aria-live="off"></span><span class="cursor" id="cursor">_</span>
             </p>
         </div>
     </div>
+
+    <script src="/script.js"></script>
 </body>
 </html>
