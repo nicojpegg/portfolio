@@ -6,6 +6,7 @@ const terminal = document.getElementById('terminal');
 const output = document.getElementById('terminal-output');
 const typedSpan = document.getElementById('typed');
 const inputLine = document.getElementById('active-input-line');
+const mobileInput = document.getElementById('mobile-input');
 
 // Cache for fetched pages (to avoid re-fetching)
 const pageCache = {};
@@ -115,7 +116,32 @@ document.addEventListener('keydown', (e)=>{
 // Responsive ASCII: scale down font-size on narrow screens
 function adjustAscii(){ const ascii=document.getElementById('ascii-art'); if(!ascii) return; const width=window.innerWidth; if(width<360){ ascii.style.fontSize='6px'; ascii.style.lineHeight='6px'; ascii.style.whiteSpace='pre-wrap'; } else if(width<500){ ascii.style.fontSize='8px'; ascii.style.lineHeight='8px'; ascii.style.whiteSpace='pre-wrap'; } else if(width<700){ ascii.style.fontSize='10px'; ascii.style.lineHeight='10px'; ascii.style.whiteSpace='pre'; } else { ascii.style.fontSize=''; ascii.style.lineHeight=''; ascii.style.whiteSpace='pre'; } }
 window.addEventListener('resize', adjustAscii); adjustAscii();
-window.addEventListener('click', ()=>{});
+// Focus hidden mobile input on tap to summon keyboard
+function focusMobile(){ if(mobileInput){ mobileInput.focus({preventScroll:true}); setTimeout(()=>mobileInput.setSelectionRange(mobileInput.value.length, mobileInput.value.length), 0); } }
+window.addEventListener('click', (e)=>{ if(terminal.contains(e.target)) focusMobile(); });
+inputLine.addEventListener('click', focusMobile);
+
+// Keep typed content in sync with hidden input
+if(mobileInput){
+  mobileInput.addEventListener('input', ()=>{
+    currentInput = mobileInput.value;
+    typedSpan.textContent = currentInput;
+  });
+  mobileInput.addEventListener('keydown', (e)=>{
+    if(e.key==='Enter'){
+      const prompt = createPrompt(currentInput);
+      output.appendChild(prompt);
+      const executing = currentInput;
+      if(executing){ history.push(executing); historyIndex = history.length; }
+      currentInput='';
+      typedSpan.textContent='';
+      mobileInput.value='';
+      runCommand(executing);
+      scrollToBottom();
+      e.preventDefault();
+    }
+  });
+}
 // Initial state already present (ASCII + hint) – nothing else to do on load.
 
 // --- Easter Egg: Skibidi effect ---
