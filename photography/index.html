@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>nico.jpeg | photography</title>
-    <link rel="stylesheet" href="/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <meta name="description" content="Photography showcase by nico.jpeg" />
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&icon_names=code,dark_mode,home,light_mode,mail,person,photo_camera"/>
 </head>
-<body class="photo-page">
-    <header class="photo-hero">
-        <div class="hero-inner">
-            <div class="hero-meta">
-                <a href="/" class="back-link" aria-label="Back to terminal">← back</a>
-                <h1 class="hero-title">Photography</h1>
-            </div>
-        </div>
-    </header>
+<body>
+    <a id="home-toggle" href="/index.html" aria-label="Go home">
+        <span class="material-symbols-rounded">home</span>
+    </a>
 
-    <main class="gallery-shell" id="gallery" aria-live="polite">
-        <div class="gallery-grid" id="gallery-grid"></div>
-    </main>
+    <button id="theme-toggle" aria-label="Switch theme">
+        <span id="theme-icon" class="material-symbols-rounded">dark_mode</span>
+    </button>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog">
-        <button class="lightbox-close" id="lb-close" aria-label="Close (Esc)">✕</button>
-        <button class="lightbox-nav prev" id="lb-prev" aria-label="Previous (←)">‹</button>
-        <button class="lightbox-nav next" id="lb-next" aria-label="Next (→)">›</button>
-        <div class="lightbox-stage">
-            <img id="lb-img" alt="" />
-            <div class="lightbox-caption" id="lb-cap"></div>
+    <div class="container">
+        <p><span class="material-symbols-rounded">photo_camera</span></p>
+        <h1>photography</h1>
+        <hr>
+
+        <div class="content">
+        
         </div>
+
+        <a href="/index.html" class="home-button menu-link">
+            <span class="material-symbols-rounded">home</span>back to home
+        </a>
     </div>
 
-    <script src="/photography/photography.js" defer></script>
+    <div id="image-popup" class="image-popup" aria-hidden="true">
+        <img id="popup-image" class="popup-image" alt="Banner preview">
+    </div>
+
+    <script src="/script.js"></script>
 </body>
 </html>

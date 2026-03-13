@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nico.jpeg</title>
+    <title>Document</title>
 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&icon_names=code,dark_mode,light_mode,mail,person,photo_camera"/>
 </head>
 <body>
-    <div class="frame">
-        <div class="frame_buttons">
-            <span class="button-red" onclick="window.close();"></span>
-            <span class="button-yellow"></span>
-            <span class="button-green" onclick="if (!document.fullscreenElement) { document.documentElement.requestFullscreen(); } else { document.exitFullscreen(); }"></span>
+    <button id="theme-toggle" aria-label="Switch theme">
+        <span id="theme-icon" class="material-symbols-rounded">dark_mode</span>
+    </button>
+
+    <div class="container">
+        <img src="src/banner.jpg" alt="Banner" class="banner">
+        <p>hi, i'm</p>
+        <h1>nico</h1>
+        <hr>
+
+        <div class="menu">
+            <a href="/about/" class="menu-link">
+                <span class="material-symbols-rounded">person</span>
+                about me
+            </a>
+            <a href="/projects/" class="menu-link">
+                <span class="material-symbols-rounded">code</span>
+                projects
+            </a>
+            <a href="/photography/" class="menu-link">
+                <span class="material-symbols-rounded">photo_camera</span>
+                photography
+            </a>
+            <a href="/contact/" class="menu-link">
+                <span class="material-symbols-rounded">mail</span>
+                contact
+            </a>
         </div>
     </div>
 
-    <div class="terminal" id="terminal">
-        <div id="terminal-output">
-            <div id="terminal-header">
-            <pre class="ascii" id="ascii-art">
-███╗   ██╗██╗ ██████╗ ██████╗         ██╗██████╗ ███████╗ ██████╗ 
-████╗  ██║██║██╔════╝██╔═══██╗        ██║██╔══██╗██╔════╝██╔════╝ 
-██╔██╗ ██║██║██║     ██║   ██║        ██║██████╔╝█████╗  ██║  ███╗
-██║╚██╗██║██║██║     ██║   ██║   ██   ██║██╔═══╝ ██╔══╝  ██║   ██║
-██║ ╚████║██║╚██████╗╚██████╔╝██╗╚█████╔╝██║     ███████╗╚██████╔╝
-╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚════╝ ╚═╝     ╚══════╝ ╚═════╝ 
-            </pre>
-            <div class="hint" id="home-hint">type 'help' to list available commands</div>
-            </div>
-        </div>
-
-        <div class="cmd input-line" id="active-input-line">
-            <p>
-                <span class="grey">guest</span><span class="dark">@</span><a class="green" href="/" data-command="home">nicojpeg.tech</a><span class="dark">:$ ~</span>
-                <span id="typed" class="typed" aria-live="off"></span><span class="cursor" id="cursor">_</span>
-                <input id="mobile-input" class="hidden-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="text" aria-hidden="true" />
-            </p>
-        </div>
+    <div id="image-popup" class="image-popup" aria-hidden="true">
+        <img id="popup-image" class="popup-image" alt="Banner preview">
     </div>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
