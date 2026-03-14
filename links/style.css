@@ -1,0 +1,12 @@
+.content {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.content a {
+    margin-bottom: 8px;
+}
+
+.content a:last-child {
+    margin-bottom: 0;
+}

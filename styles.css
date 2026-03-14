@@ -227,10 +227,11 @@ hr {
 	animation: link-enter 0.45s ease both;
 }
 
-.menu-link:nth-child(1) { animation-delay: 0.95s; }
-.menu-link:nth-child(2) { animation-delay: 1.03s; }
-.menu-link:nth-child(3) { animation-delay: 1.11s; }
-.menu-link:nth-child(4) { animation-delay: 1.19s; }
+.menu-link:nth-child(1) { animation-delay: 0.50s; }
+.menu-link:nth-child(2) { animation-delay: 0.60s; }
+.menu-link:nth-child(3) { animation-delay: 0.70s; }
+.menu-link:nth-child(4) { animation-delay: 0.80s; }
+.menu-link:nth-child(5) { animation-delay: 0.90s; }
 
 .menu-link:hover {
 	border-color: var(--accent);

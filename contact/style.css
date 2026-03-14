@@ -2,3 +2,128 @@
     width: 100%;
     margin-bottom: 15px;
 }
+
+.content a:first-child {
+    margin-bottom: 8px;
+}
+
+.content a:last-child {
+    margin-bottom: 0;
+}
+
+.contact-popup {
+    position: fixed;
+    inset: 0;
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: color-mix(in srgb, var(--background) 20%, #000 70%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1100;
+
+    transition: opacity 0.25s ease;
+}
+
+.contact-popup.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.contact-popup-card {
+    width: min(100%, 360px);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    border: 1px solid var(--muted-border);
+    border-radius: 18px;
+    background-color: var(--surface);
+}
+
+.contact-popup-card h2 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.contact-popup-code {
+    padding: 8px 8px 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: 1px solid var(--muted-border);
+    border-radius: 10px;
+    background-color: color-mix(in srgb, var(--secondary) 18%, transparent);
+}
+
+.contact-popup-value {
+    flex: 1;
+
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+.contact-copy-icon {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--muted-border);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-copy-icon:hover {
+    border-color: var(--accent);
+    background-color: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.contact-copy-icon .material-symbols-rounded {
+    font-size: 20px;
+}
+
+.contact-popup-actions {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-action,
+.contact-close {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+
+    border: 1px solid var(--muted-border);
+    border-radius: 10px;
+    background-color: color-mix(in srgb, var(--secondary) 26%, transparent);
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-align: center;
+
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-action:hover,
+.contact-close:hover {
+    border-color: var(--accent);
+    background-color: color-mix(in srgb, var(--accent) 22%, transparent);
+    transform: translateY(-2px);
+}

@@ -1,4 +1,18 @@
 .content {
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    margin-top: 30px;
     margin-bottom: 15px;
+}
+
+.content ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.content li {
+    margin-bottom: 3px;
 }
