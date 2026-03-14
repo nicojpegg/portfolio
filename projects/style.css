@@ -8,6 +8,11 @@
     border-radius: 12px;
     background-color: color-mix(in srgb, var(--secondary) 20%, transparent);
     overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.project-details:last-child {
+    margin-bottom: 0;
 }
 
 .project-summary {
