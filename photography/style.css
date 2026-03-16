@@ -2,3 +2,68 @@
     width: 100%;
     margin-bottom: 15px;
 }
+
+.container {
+    width: min(100%, 420px);
+}
+
+.photo-carousel {
+    width: 100%;
+}
+
+.photo-stack {
+    display: grid;
+    gap: 8px;
+}
+
+.photo-details {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background-color: color-mix(in srgb, var(--secondary) 16%, transparent);
+    overflow: hidden;
+    opacity: 0.78;
+    transform: scale(0.96);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.photo-details.is-open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.photo-summary {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.photo-image {
+    width: 100%;
+    height: 76px;
+    object-fit: cover;
+    display: block;
+    transition: height 0.3s ease, transform 0.3s ease;
+}
+
+.photo-details.is-open .photo-image {
+    height: 340px;
+}
+
+.photo-details:hover,
+.photo-summary:focus-visible {
+    transform: scale(1);
+    outline: none;
+}
+
+@media (max-width: 520px) {
+    .photo-image {
+        height: 72px;
+    }
+
+    .photo-details.is-open .photo-image {
+        height: 300px;
+    }
+}

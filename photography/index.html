@@ -28,8 +28,44 @@
         <hr>
 
         <div class="content">
-            coming soon...
+            <section class="photo-carousel" aria-label="Photography carousel">
+                <div class="photo-stack" aria-label="Select photos">
+                    <div class="photo-details is-open">
+                        <button type="button" class="photo-summary" aria-expanded="true">
+                            <img class="photo-image" src="/src/banner.jpg" alt="Moody city shot">
+                        </button>
+                    </div>
+
+                    <div class="photo-details">
+                        <button type="button" class="photo-summary" aria-expanded="false">
+                            <img class="photo-image" src="/src/projects/cat-nicojpeg-tech.jpeg" alt="Cat portrait">
+                        </button>
+                    </div>
+
+                    <div class="photo-details">
+                        <button type="button" class="photo-summary" aria-expanded="false">
+                            <img class="photo-image" src="/src/projects/html-css.png" alt="Graphic detail">
+                        </button>
+                    </div>
+
+                    <div class="photo-details">
+                        <button type="button" class="photo-summary" aria-expanded="false">
+                            <img class="photo-image" src="/src/banner.jpg" alt="Street reflection">
+                        </button>
+                    </div>
+
+                    <div class="photo-details">
+                        <button type="button" class="photo-summary" aria-expanded="false">
+                            <img class="photo-image" src="/src/projects/cat-nicojpeg-tech.jpeg" alt="Soft portrait">
+                        </button>
+                    </div>
+                </div>
+            </section>
         </div>
+
+        <a href="/photography/gallery/" class="menu-link home-button">
+            <span class="material-symbols-rounded">photo_camera</span>open gallery
+        </a>
 
         <a href="/index.html" class="home-button menu-link">
             <span class="material-symbols-rounded">home</span>back to home
@@ -41,5 +77,6 @@
     </div>
 
     <script src="/script.js"></script>
+    <script src="carousel.js"></script>
 </body>
 </html>
